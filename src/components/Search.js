@@ -10,16 +10,30 @@ class Search extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loading: true
+            loading: true,
+            country_code: ''
         };
+
+        this.onSearch = this.onSearch.bind(this);
+        this.onChange = this.onChange.bind(this);
+    }
+
+    onChange(e) {
+        this.setState({ [e.target.name]: e.target.value });
+    }
+
+    onSearch(e) {
+        if (e.key == 'Enter') {
+            this.props.fetchMatches(this.state.country_code).then(res => {
+                this.setState({ loading: false });
+            }, err => {
+
+            });
+        }
     }
 
     componentDidMount() {
-        this.props.fetchMatches().then(res => {
-            this.setState({ loading: false });
-        }, err => {
 
-        });
     }
 
     render() {
@@ -38,7 +52,20 @@ class Search extends React.Component {
 
         return (
             <div className="match-list">
-                {this.state.loading ? loading : matchList}
+                <div className="ui search">
+                    <div className="ui icon input">
+                        <input
+                            name="country_code"
+                            className="prompt"
+                            type="text"
+                            placeholder="Place country code"
+                            value={this.state.country_code}
+                            onChange={this.onChange}
+                            onKeyPress={this.onSearch} />
+                        <i className="search icon"></i>
+                    </div>
+                    {this.state.loading ? loading : matchList}
+                </div>
             </div>
         );
     }
@@ -56,3 +83,5 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, { fetchMatches })(Search);
+
+

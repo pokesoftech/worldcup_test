@@ -1,12 +1,14 @@
 import React from 'react';
 import { IndexLink } from 'react-router';
+import ball from '../assets/images/ball.png';
+import '../assets/stylesheets/components/MatchCard.scss';
 
 export default function MatchCard({ match }) {
   return (
     <div className="ui items segment">
       <div className="item">
         <div className="image">
-          <img alt="Match Logo" />
+          <img src={ball} alt="Match Logo" />
         </div>
         <div className="content">
           <a className="header">Location: {match.location}</a>
@@ -28,5 +30,5 @@ export default function MatchCard({ match }) {
 }
 
 MatchCard.propTypes = {
-  market: React.PropTypes.object.isRequired
+  match: React.PropTypes.object.isRequired
 }

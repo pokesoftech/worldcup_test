@@ -8,9 +8,9 @@ export function setMatches(matches) {
   };
 }
 
-export function fetchMatches() {
+export function fetchMatches(country_code) {
   return dispatch => {
-    return axios.get(process.env.API_URL + '/matches/country?fifa_code=USA').then(res => {
+    return axios.get(process.env.API_URL + '/matches/country?fifa_code='+country_code).then(res => {
       if (res.status !== 200) {
         console.log(`There was a problem: ${res.status}`);
         return;
