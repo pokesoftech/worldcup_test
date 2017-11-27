@@ -1,0 +1,79 @@
+@import "../base/mixin";
+
+.row {
+    color: $white-color;
+
+    h1 {
+        font-family: 'Lato';
+        font-weight: 900;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.0825em;
+        font-size: 65.8px;
+    }
+
+    h3 {
+        font-family: 'Lato';
+        font-weight: 900;
+        text-align: center;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.0825em;
+        font-size: 35.8px;
+    }
+
+    .code-on-github {
+        margin-left: 39%;
+    }
+
+    p {
+        font-family: inherit;
+        font-weight: normal;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+        text-rendering: optimizeLegibility;
+        font-size: 18px;
+    }
+
+    button {
+        border-style: solid;
+        border-width: 0;
+        cursor: pointer;
+        font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-weight: normal;
+        line-height: normal;
+        margin: 0 0 1.25rem;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        -webkit-appearance: none;
+        border-radius: 0;
+        display: inline-block;
+        padding-top: 1rem;
+        padding-right: 2rem;
+        padding-bottom: 1.0625rem;
+        padding-left: 2rem;
+        font-size: 1rem;
+        background-color: #8fa3be;
+        border-color: #6580a6;
+        color: white;
+        transition: background-color 300ms ease-out;
+    }
+}
+
+code {
+    font-size: 85%;
+    color: white;
+    padding: 5px;
+    background: white;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+    margin: 0 5px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    font-weight: normal;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dfdfdf;
+}

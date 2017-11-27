@@ -1,0 +1,18 @@
+@import "../base/mixin";
+
+/* Header Start */
+.header {
+  display: block;
+  margin: 103px auto;
+  height: 80px;
+  background: white;
+  background: rgba(255,255,255,0.3);
+  width: 100%;
+
+  img {
+    width: 90px;
+    margin-left: 45%;
+  }
+}
+
+/* @media end */
