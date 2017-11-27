@@ -37,14 +37,14 @@ class Search extends React.Component {
         );
 
         return (
-            <div>
+            <div className="match-list">
                 {this.state.loading ? loading : matchList}
             </div>
         );
     }
 }
 
-ExplorePage.propTypes = {
+Search.propTypes = {
     matches: React.PropTypes.array.isRequired,
     fetchMatches: React.PropTypes.func.isRequired
 }

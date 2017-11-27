@@ -1,4 +1,5 @@
 import React from 'react';
+import { IndexLink } from 'react-router';
 import '../assets/stylesheets/components/HomePage.scss';
 
 class HomePage extends React.Component {
@@ -34,68 +35,68 @@ class HomePage extends React.Component {
             <p>
               All match data, updated every minute
               <br />
-              <a href="http://worldcup.sfg.io/matches">
+              <IndexLink to='http://worldcup.sfg.io/matches' activeClassName="active">
                 http://worldcup.sfg.io/matches
-              </a>
+              </IndexLink>
             </p>
             <p>
               Today's matches
               <br />
-              <a href="http://worldcup.sfg.io/matches/today">
+              <IndexLink to='http://worldcup.sfg.io/matches/today' activeClassName="active">
                 http://worldcup.sfg.io/matches/today
-              </a>
+              </IndexLink>
             </p>
             <p>
               Returns the current match, if a match is happening, otherwise nothing
               <br />
-              <a href="http://worldcup.sfg.io/matches/current">
+              <IndexLink to='http://worldcup.sfg.io/matches/current' activeClassName="active">
                 http://worldcup.sfg.io/matches/current
-              </a>
+              </IndexLink>
             </p>
             <p>
               Matches for any country, by entering their FIFA Code.
               <br />
-              <a href="http://worldcup.sfg.io/matches/country?fifa_code=USA">
+              <IndexLink to='/search' activeClassName="active">
                 http://worldcup.sfg.io/matches/country?fifa_code=USA
-              </a>
+              </IndexLink>
             </p>
           </div>
           <div className="col-md-6">
             <p>
               Results for teams (wins, losses, draws, goals_for, goals_against)
               <br />
-              <a href="http://worldcup.sfg.io/teams/results">
+              <IndexLink to='http://worldcup.sfg.io/teams/results' activeClassName="active">
                 http://worldcup.sfg.io/teams/results
-              </a>
+              </IndexLink>
             </p>
             <p>
               Results for teams by group, ordered by curren group position
               <br />
-              <a href="http://worldcup.sfg.io/teams/group_results">
+              <IndexLink to='http://worldcup.sfg.io/teams/group_results' activeClassName="active">
                 http://worldcup.sfg.io/teams/group_results
-              </a>
+              </IndexLink>
             </p>
             <p>
               List of all teams in world cup, along with fifa abbreviation
               <br />
-              <a href="http://worldcup.sfg.io/teams/">
+              <IndexLink to='http://worldcup.sfg.io/teams/' activeClassName="active">
                 http://worldcup.sfg.io/teams/
-              </a>
+              </IndexLink>
             </p>
           </div>
           <div className="col-md-12">
             <h3>OPTIONAL PARAMETERS</h3>
             <p>
               You can append <code>?by_date=desc</code> to any query to sort the matches by future to past. <code>?by_date=asc</code> does past to future.
-              <a href="http://worldcup.sfg.io/matches/today/?by_date=DESC">
+              <IndexLink to='http://worldcup.sfg.io/matches/today/?by_date=DESC' activeClassName="active">
                 http://worldcup.sfg.io/matches/today/?by_date=DESC
-              </a>
+              </IndexLink>
             </p>
             <p>
               You can append <code>?by=</code> with optional params <code>total_goals</code>, <code>closest_score</code>, <code>away_team_goals</code>, <code>home_team_goals</code>
-              <a href="http://worldcup.sfg.io/matches/?by=total_goals">
+              <IndexLink to='http://worldcup.sfg.io/matches/?by=total_goals' activeClassName="active">
                 http://worldcup.sfg.io/matches/?by=total_goals
-              </a>
+              </IndexLink>
             </p>
           </div>
         </div>
