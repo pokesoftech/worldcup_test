@@ -27,7 +27,7 @@ class Search extends React.Component {
             this.props.fetchMatches(this.state.country_code).then(res => {
                 this.setState({ loading: false });
             }, err => {
-
+                this.setState({ loading: false });
             });
         }
     }
