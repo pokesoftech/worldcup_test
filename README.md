@@ -1,1 +1,2 @@
-MKT
+Worldcup
+http://worldcup.sfg.io/
